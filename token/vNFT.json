@@ -1,0 +1,16 @@
+{
+    "725": {
+        "<policy_id>": {
+            "@context": "https://github.com/IAMXID/did-method-iamx",
+            "files": [
+                {
+                    "mediaType": "application/ld+json",
+                    "name": "<name>",
+                    "src": "<ipfs_did>"
+                }
+            ],
+            "type": "Ed25519VerificationKey2020"
+        },
+        "version": "1.0"
+    }
+}

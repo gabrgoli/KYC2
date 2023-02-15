@@ -1,0 +1,32 @@
+{
+    "721": {
+        "<policy_id>": {
+            "<asset_name>": {
+                "name": "<display_name>",
+                "image": "<ipfs_link>",
+                "mediaType": "image/png",
+                "description": "vDelegator Identity Token",
+                "files": [
+                    {
+                        "name": "<display_name>",
+                        "mediaType": "image/png",
+                        "src": "<ipfs_link>"
+                    }
+                ],
+                "attributes": {
+                    "compliance_level": "FINMA",
+                    "nationality_compliance": "<iso>",
+                    "ticker": "<stake_address>"
+                },
+                "identity": {
+                    "@context": "https://github.com/IAMXID/did-method-iamx",
+                    "storageLocation": {
+                        "locationId": "<ifps_did>",
+                        "type": "url"
+                    }
+                }
+            }
+        },
+        "version": "1.0"
+    }
+}

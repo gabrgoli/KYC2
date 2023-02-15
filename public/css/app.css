@@ -1,0 +1,275 @@
+body {
+   
+}
+
+main {
+    max-width: 1200px;
+}
+
+.container{
+  margin-left: 110px;
+  width: auto;
+}
+p,
+button,
+input,
+a {
+    font-size: 20px !important;
+}
+
+button {
+    white-space: nowrap;
+    border: none;
+}
+.btn-wallet{
+  border: 2px #0081FF solid;
+  color: #0081FF;
+  font-size:14px !important;
+  font-weight: bold;
+  padding-left:25px;
+  padding-right:25px;
+  border-radius: 25px;
+}
+
+.hint {
+  font-size: 12px;
+}
+.btn-arrow{
+  border: 2px #0081FF solid;
+  background-color: #0081FF;
+  color: #ffffff;
+  font-size:24px !important;
+  font-weight: bold;
+  padding-left:25px;
+  padding-right:25px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  border-radius: 25px;
+}
+.btn-start{
+  border: 2px #0081FF solid;
+  background-color: #0081FF;
+  color: #ffffff;
+  font-size:20px !important;
+  font-weight: bold;
+  padding-left:25px;
+  padding-right:25px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  border-radius: 25px;
+}
+
+nav#header {
+    width: 110px;
+    writing-mode: vertical-rl;
+    display: flex;
+    border-right: 2px solid #000000;
+    position: fixed;
+    z-index: 11;
+    max-height: 100vh !important;
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+nav#header a {
+    transform: scale(-1);
+    display: flex !important;
+    display: none;
+    white-space: nowrap;
+    color: #000000;
+    text-decoration: none;
+}
+
+span {
+    padding-left: 0 !important;
+}
+
+.stakeAddressInput {
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-search' viewBox='-2 -2 20 20'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 6%;
+    border-right: 0;
+}
+
+.input-group-text {
+    background-color: white;
+}
+
+#epochsInput, #stakeInput {
+    padding-left: 6%;
+}
+
+.c-footer {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #0081FF;
+    color: #ffffff;
+    margin: 0 0 0 110px;
+}
+
+.c-footer p {
+    color: #ffffff;
+}
+
+.c-container {
+    width: 100%;
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #ffffff;
+}
+
+.list-group-item-rewards {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 0;
+    font-size: 20px;
+}
+
+.input-claim {
+    font-size: 1rem !important;;
+}
+
+@media (min-width: 1024px) {
+    .c-footer__wrap {
+        display: flex;
+    }
+}
+
+.c-footer__wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.c-footer__wrap p,
+.c-footer__wrap b {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.c-footer__wrap a {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 18px;
+    color: #ffffff;
+}
+
+.footerTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    width: 556px;
+}
+
+.footer-social {
+    font-family: "Space Grotesk", sans-serif;
+    width: 300px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.footer-social .holder {
+    background-color: #ffffff;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footer-social .holder .icon-linkedin {
+    margin-top: 14px;
+    height: 21px;
+    width: 21px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-social .holder .icon-2 {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-social .holder .icon-twitter {
+    height: 36px;
+    width: 36px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-social .holder .icon-telegram {
+    margin-top: 14px;
+    height: 21px;
+    width: 26px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-social .holder .icon-discord {
+    margin-top: 10px;
+    height: 26px;
+    width: 26px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.footer-social img {
+    width: 30px;
+    height: 28px;
+    margin: 5px;
+}
+
+.footer-video {
+    font-family: "Space Grotesk", sans-serif;
+    width: 300px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.footer-video a {
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+    ul {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 27px;
+    }
+}
+
+.contactButton {
+    width: 212px;
+    height: 60px;
+    background: #FFFFFF;
+    color: #0081FF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 30px;
+}
