@@ -1,5 +1,5 @@
 @extends('layout_files.layout')
-@section('title', 'Product vPool Step 2')
+@section('title', 'Product vDelegate Step 2')
 
 @section('content')
     <div class="container">

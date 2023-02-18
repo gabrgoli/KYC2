@@ -4,6 +4,10 @@
 @section('content')
     <div class="container">
 
+        <div class="spinner-border visually-hidden position-absolute top-50 start-50 opacity-100">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
         <div class="row text-center p50">
             <div class="col-md-12 col-sm-12">
                 <img src="/images/IAMX_OYI_Blue.png" style="width: 120px; margin-bottom:50px;" />
@@ -26,7 +30,7 @@
                 <h1>rKYC</h1>
                 <span>Create your reusable KYC easily and safely for more than 200 countries.</span>
             </div>
-            <div class="col-md-4 col-sm-4 text-end">
+            <div class="spinner col-md-4 col-sm-4 text-end">
                 <a href="{{ route('product.show', 'vKYC') }}" class="btn btn-arrow">-></a>
             </div>
         </div>
@@ -93,12 +97,21 @@
 
 
 
-
-
-
     </div>
 @endsection
 
 @push('scripts')
     <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+      let buttonSpinner = document.querySelector('.spinner');
+      let spinner = document.querySelector('.spinner-border');
+
+      buttonSpinner.onclick = disableButton;
+
+      function disableButton(e){
+          e.target.classList.add('disabled');
+          spinner.classList.remove('visually-hidden');
+          document.body.classList.add('opacity-50');
+      }
+    </script>
 @endpush

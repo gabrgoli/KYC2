@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
 Route::get('products/{product}', [App\Http\Controllers\ProductController::class, 'index'])->name('product.show');
 Route::get('wizard/{product}', [App\Http\Controllers\WizardController::class, 'getStep1'])->name('wizard.show');
+//Route::get('products/faq/{product}', [App\Http\Controllers\ProductController::class, 'faq'])->name('product.faq');

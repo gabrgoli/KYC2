@@ -1,11 +1,11 @@
 @extends('layout_files.layout')
-@section('title', 'Product vPool Step 1')
+@section('title', 'Product vDelegate Step 1')
 
 @section('content')
     <div class="container">
         @include('layout_files.subheader-nowallet')
 
-        <div class="row mb-5">
+        <div class="row mb-2">
             <div class="col-md-12 col-sm-12">
                 <p>Product name: {{ $dbProduct->name }}</p>
                 <p>Product price: {{ $dbProduct->price_in_ada }} </p>
@@ -41,7 +41,6 @@
         </form>
 
         @include('wizard.terms-widget')
-
     @endsection
 
     @push('scripts')

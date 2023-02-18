@@ -15,12 +15,18 @@ class ProductController extends Controller
         } elseif ($product == 'vNFT') {
             return view('products.product_vNFT');
         } elseif ($product == 'vKYC') {
-           return view('product_vKYC');
+           return view('products.product_vKYC');
         } elseif ($product == 'API') {
-            return view('product_API');
-        } else {
+            return view('products.product_API');
+        } elseif ($product == 'step1') {
+            return view('wizard.vDelegate_step1');
+    } else {
             // Default page if product is not available
             return view('main');
         }
+    }
+
+    public function faq() {
+        return view('products.faq_vPool');
     }
 }
