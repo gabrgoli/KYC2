@@ -3,22 +3,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row text-center p50">
-            <div class="col-md-12 col-sm-12">
-                <img src="/images/IAMX_OYI_Blue.png" style="width: 120px; margin-bottom:50px;" />
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <h1></h1>
-            </div>
-            <div class="col-md-6 col-sm-6 text-end">
-                <a class="btn btn-wallet">Connect Wallet</a>
-            </div>
-        </div>
-
-        <hr>
+        @include('layout_files.subheader-wallet')
 
         <div class="row mb-3">
             <div class="col-md-12 col-sm-12">
@@ -31,5 +16,5 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
 @endpush

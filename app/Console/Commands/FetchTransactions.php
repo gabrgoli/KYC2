@@ -131,4 +131,46 @@ class FetchTransactions extends Command
         ]);
         return (array) json_decode($responseTransactionUTxOs->body());
     }
+
+    private function getTransactionsDbSync($iamxWalletAddress, $blockheight) {
+
+        $transactions = DB::connection('dbsync')
+            ->select(DB::raw(
+                "SELECT
+                         DISTINCT(ENCODE(tx.hash, 'hex')) as tx_hash,
+                         block.epoch_no,
+                         block.block_no
+                       FROM
+                         tx
+                       INNER JOIN block ON block.id = tx.block_id
+                       WHERE
+                         block.block_no >= ".$blockheight."
+                       AND
+                         tx.id IN (
+                            SELECT
+                              sq.tx_id
+                            FROM (
+                                SELECT
+                                  tx_id
+                                FROM
+                                  tx_out
+                                WHERE
+                                  address = '".$iamxWalletAddress."'
+                                UNION
+                                SELECT
+                                  tx_in_id AS tx_id
+                                FROM
+                                  tx_out
+                                LEFT JOIN tx_in ON tx_out.tx_id = tx_in.tx_out_id
+                                  AND tx_out.index = tx_in.tx_out_index
+                                WHERE
+                                  tx_in.tx_in_id IS NOT NULL
+                                AND tx_out.address = '".$iamxWalletAddress."'
+                                ) sq)
+                       ORDER BY
+                         block.block_no DESC"
+            ));
+
+        return $transactions;
+    }
 }

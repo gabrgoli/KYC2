@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('callback/{provider}', [App\Http\Controllers\CallbackController::class, 'index'])->name('callback');
+Route::get('callback/{provider}', [App\Http\Controllers\CallbackController::class, 'error'])->name('callback');

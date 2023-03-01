@@ -6,21 +6,19 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index($product) {
-
-        if ($product == 'vPool') {
+    public function index($product)
+    {
+        if ($product == 'vPOOL') {
             return view('products.product_vPool');
-        } elseif ($product == 'vDelegate') {
-            return view('products.product_vDelegate');
+        } elseif ($product == 'vDELEGATOR') {
+            return view('products.product_vDelegator');
         } elseif ($product == 'vNFT') {
             return view('products.product_vNFT');
         } elseif ($product == 'vKYC') {
-           return view('products.product_vKYC');
+            return view('products.product_vKYC');
         } elseif ($product == 'API') {
             return view('products.product_API');
-        } elseif ($product == 'step1') {
-            return view('wizard.vDelegate_step1');
-    } else {
+        } else {
             // Default page if product is not available
             return view('main');
         }
